@@ -80,18 +80,18 @@ export class FormWithConditionals extends Component {
    * https://react-jsonschema-form.readthedocs.io/en/latest/#form-data-changes
    * @param formChange {Object}
    */
-  handleChange (formChange) {
+  handleChange (formChange, id) {
     const { formData } = formChange;
     const { onChange } = this.props;
     if (!deepEquals(formData, this.state.formData)) {
       this.updateConf(formData, (newValues) => {
         if (onChange) {
           let updChange = Object.assign({}, formChange, newValues);
-          onChange(updChange);
+          onChange(updChange, id);
         }
       });
     } else {
-      onChange && onChange(formChange);
+      onChange && onChange(formChange, id);
     }
   }
 
