@@ -7,7 +7,7 @@
     "Aivaras Prudnikovas <ivar.prudnikov@gmail.com>",
     "ba11en <brussallen@gmail.com>"
   ],
-  "version": "1.5.5",
+  "version": "1.5.4",
   "scripts": {
     "build": "rimraf dist lib && npm run build:umd && npm run build:cjs && npm run build:es && npm run build:es:lib",
     "build:umd": "cross-env NODE_ENV=production BABEL_ENV=umd webpack --config webpack.config.dist.js",
