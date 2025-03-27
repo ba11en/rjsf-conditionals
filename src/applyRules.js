@@ -71,11 +71,6 @@ export class FormWithConditionals extends Component {
         const maybeHandler = this.updateConfHandler;
         this.updateConfHandler = null;
         maybeHandler && maybeHandler(values);
-        // Add onRulesApplied callback here
-        const { onRulesApplied } = this.props;
-        if (onRulesApplied) {
-          onRulesApplied();
-        }
       }
     });
   }
@@ -130,7 +125,6 @@ FormWithConditionals.propTypes = {
   initialSchema: PropTypes.object.isRequired,
   initialUiSchema: PropTypes.object,
   forwardedRef: PropTypes.any,
-  onRulesApplied: PropTypes.func, // Add onRulesApplied to propTypes
 };
 
 /**
